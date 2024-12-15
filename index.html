@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Personal Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f6f8fd 0%, #f1f4f9 100%);
+            color: #2d3748;
+            line-height: 1.7;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #fff6f6 0%, #ffe1e1 100%);
+            padding: 60px 40px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 100%);
+            border-radius: 50%;
+            transform: translate(100px, -100px);
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            color: #4a5568;
+            max-width: 600px;
+            line-height: 1.8;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        @media (min-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .purple-card {
+            background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%);
+        }
+
+        .pink-card {
+            background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%);
+        }
+
+        .image-container {
+            width: 100%;
+            height: 600px;
+            overflow: hidden;
+            border-radius: 20px;
+            margin: 20px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .image-container:hover img {
+            transform: scale(1.05);
+        }
+
+        .contact-form {
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            margin-top: 5px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #818cf8;
+            box-shadow: 0 0 0 4px rgba(129,140,248,0.1);
+        }
+
+
+textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        button {
+            background: linear-gradient(135deg, #818cf8 0%, #6366f1 100%);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(99,102,241,0.2);
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(99,102,241,0.3);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2em;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #818cf8 0%, #6366f1 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(99,102,241,0.2);
+        }
+
+        .accent-text {
+            color: #6366f1;
+            font-weight: 600;
+        }
+
+        .card p {
+            color: #4a5568;
+            line-height: 1.8;
+        }
+
+        .highlight-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .highlight {
+            position: relative;
+            z-index: 1;
+        }
+
+        .highlight::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30%;
+            background: rgba(129,140,248,0.2);
+            z-index: -1;
+            transform: skewX(-15deg);
+        }
+
+        .scroll-indicator {
+            width: 30px;
+            height: 50px;
+            border: 2px solid #6366f1;
+            border-radius: 15px;
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            display: flex;
+            justify-content: center;
+            padding-top: 10px;
+        }
+
+        .scroll-indicator::before {
+            content: "";
+            width: 4px;
+            height: 8px;
+            background: #6366f1;
+            border-radius: 2px;
+            animation: scroll 1.5s infinite;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateY(0); opacity: 1; }
+            100% { transform: translateY(15px); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Hello, I'm Osagie Anolu<span class="highlight-container"><span class="highlight">Pastor Osagie Anolu</span></span></h1>
+            <p>
+                I transform ideas into meaningful solutions that leave a lasting impression. With a unique journey that intertwines faith, technology, and resilience, I am Osagie Anolu—a tent-making missionary, pastor, and tech innovator with a passion for service and transformation. From overcoming trials, addiction, and navigating recovery to dedicating my life to technology and ministry, I’ve learned that every challenge is an opportunity to grow, heal, and create purpose-driven change.  
+                
+                My journey spans from years spent in recovery to integrating the 12 Steps, cloud engineering, and IT security into impactful service. As a pastor with experience in the Recovery Church Movement and Redeemed Christian Church of God, missions work, and coding proficiency in AWS, Google cloud services, Linux, Docker, Kubernetes, and more, I blend technical expertise with spiritual guidance to provide innovative solutions for individuals and organizations.  
+                
+                My dream is to become a Managed Service Provider focused on offering IT support to small businesses, nonprofits, and churches. Through this vision, I hope to use my skills to build systems, foster partnerships, and provide innovative, purpose-driven solutions to meet the evolving needs of the communities I serve.  
+                
+                Driven by dreams, faith, and technical ambition, I strive to lead projects that inspire, restore, and build transformative solutions for diverse communities. My mission continues to grow—creating opportunities, building partnerships, and leading with love, innovation, and grace.
+
+            </p>
+        </section>
+
+        <!-- Grid Layout -->
+        <div class="grid">
+            <!-- Left Column -->
+            <div>
+                <div class="card">
+                    <h2>Experience</h2>
+                    <p>With over <span class="accent-text">5 years</span> of personal growth and leadership experience, I’m a passionate beginner in tech with a focus on cloud engineering and IT solutions. I blend creativity, faith-driven service, and problem-solving to make a meaningful impact.
+
+                        Experience Highlights:
+                        
+                        Cloud Engineering & IT Skills: Learning AWS (DynamoDB, SageMaker, serverless), CI/CD pipelines, Docker, Kubernetes, Bash scripting, and Linux.
+                        Software Development: Knowledge of HTML, CSS, JavaScript, and Python.
+                        Missionary Work & Leadership: 18 months mentoring at-risk youth, combining faith, leadership, and compassion.
+                        My goal is to grow as a Managed Service Provider focused on supporting small businesses, nonprofits, and faith-based organizations through IT innovation and service.
+                    
+                    </p>
+                </div>
+                
+                <div class="image-container">
+                    <img src="osagie.jpg" alt="Your Professional Image">
+                </div>
+            </div>
+
+
+<!-- Right Column -->
+            <div>
+                <div class="card purple-card">
+                    <div class="icon">
+                        <!-- Add icon here -->
+                    </div>
+                    <h2>Skills & Expertise</h2>
+<p>Building a foundation in tech with a focus on innovation and problem-solving through:<br>
+   • Cloud Engineering with AWS and Google cloud <br>
+   • CI/CD Pipelines, Docker, Kubernetes, and Linux <br>
+   • HTML, CSS, JavaScript, Python, and Bash Scripting <br>
+   • Leadership & Mentorship from faith-based and humanitarian projects</p>
+
+                </div>
+
+                <div class="card pink-card">
+                    <h2>Featured Projects</h2>
+<p>Each project tells a unique story of innovation and creativity. From concept to completion, I focus on delivering solutions that make a real difference. Below are some highlighted projects:</p>
+<ul>
+    <li><strong>Recovery Church Daily Scripture Quotes:</strong> A web platform providing daily inspirational quotes based on the Bible and the Big Book to support recovery groups and spiritual growth.</li>
+    <li><strong>AI Data Collection for Credo AI:</strong> Contributed to data research and entry tasks, supporting AI model optimization and machine learning projects.</li>
+    <li><strong>Custom HTML & CSS Web Designs:</strong> Designed responsive and user-friendly web pages with attention to aesthetics, accessibility, and seamless user navigation. (Over 16 projects created and deployed)</li>
+    <li><strong>Deployed Web Projects to AWS:</strong> Successfully deployed 3 web projects to AWS, utilizing cloud computing tools and deployment strategies to ensure scalability and uptime.</li>
+    <li><strong>Linux Administration Scripts:</strong> Developed and optimized Linux scripts to manage server operations, streamline cloud services, and maintain system performance in cloud environments.</li>
+    <li><strong>Cloud Integration with AWS Services:</strong> Leveraged AWS tools such as DynamoDB, CloudWatch, and SageMaker to optimize cloud applications and services.</li>
+    <li><strong>Website Recovery & Support Scripts:</strong> Designed scripts and workflows to monitor, recover, and optimize website uptime for continuous delivery and improved reliability.</li>
+</ul>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <section class="contact-form">
+            <h2>Let's Create Something Together</h2>
+            <form action="https://formspree.io/f/mnnqkqda" method="POST">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="Tell me about your project..." required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2025 Osagie Anolu. All Rights Reserved .</p>
+        </footer>
+    </div>
+
+    <div class="scroll-indicator"></div>
+</body>
+</html>
