@@ -1,5 +1,5 @@
 AltSchool 2nd Semester Final Project: Deploying GitHub Web Page on AWS EC2 Server
-Submitted By: Osagie Anolu
+Submitted By: Osagie Anolu     ALT/SOE/024/0317
 Course: Cloud Engineering Karatu '24
 
 Project Overview
