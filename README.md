@@ -54,11 +54,21 @@ cd /var/www/html/
 ls -lrt
 5. Restarted Apache to reflect changes:
 systemctl restart apache2
+
+Domain and SSL certificate
 1.I got a domain (osagieanolu.engineer) from name.com and I linked my IP addr to it
-2. Checked the SSL certificate status using an online tool (e.g., SSL Labs).
-3. Ensured HTTP requests redirect to HTTPS automatically.
-4. Conclusion and Website URL
-The HTML project was successfully deployed on AWS EC2 and secured with SSL/TLS using AWS Certificate Manager (ACM) and Certbot.
+2. I installed Snapd-----apt install Snapd
+3. Installed certbot via snap-------sudo snap install --classic certbot
+4. Prepare Certbot Command------sudo certbot --apache
+5. Follow Certbot Prompts
+  Enter your email address.
+  Agree to the terms of service.
+  Choose whether to share your email with the EFF.
+6. Verify the Installation-------sudo certbot certificates
+7. Automate Renewal-------sudo crontab -e
+8. 0 0,12 * * * sudo certbot renew --quiet
+
+The HTML project was successfully deployed on AWS EC2 and secured with SSL/TLS using Certbot.
 Secure URL: https://osagieanolu.engineer
 
 
