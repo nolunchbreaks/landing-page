@@ -18,7 +18,7 @@ Table of Contents
 2. Created a new EC2 instance with the following configuration:
 AMI: Ubuntu Server 22.04 LTS
 Instance Type: t2.micro (Free Tier)
-Key Pair: Generated a new key or used an existing one for SSH access.
+Key Pair: I used an existing one for SSH access.
 Security Group: Allowed inbound rules for HTTP (port 80), HTTPS (port 443), and SSH (port 22).
 3.Launched the instance successfully and noted its Public IP Address: 3.84.13.68
 
