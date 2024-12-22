@@ -1,10 +1,11 @@
-AltSchool 2nd Semester Final Project: Deploying GitHub Web Page on AWS EC2 Server
+# AltSchool 2nd Semester Final Project: Deploying GitHub Web Page on AWS EC2 Server
 Submitted By: Osagie Anolu     ALT/SOE/024/0317
 Course: Cloud Engineering Karatu '24
 
-Project Overview
+# Project Overview
 This document details the step-by-step process of provisioning an AWS EC2 server, installing and configuring an Apache web server, deploying an HTML project from GitHub, and securing the website (osagieanolu.enginner) Certbot for SSL/HTTPS.
-Table of Contents
+
+# Table of Contents
 1. Server Provisioning on AWS EC2
 2. Accessing the EC2 Instance via SSH
 3. Installing and Configuring Apache Server
@@ -13,7 +14,8 @@ Table of Contents
 6. Redirecting HTTP to HTTPS
 7. Verification and Testing
 8. Conclusion and Website URL
-1. Server Provisioning on AWS EC2
+
+# Server Provisioning on AWS EC2
 1. Logged into the AWS Management Console.
 2. Created a new EC2 instance with the following configuration:
 AMI: Ubuntu Server 22.04 LTS
@@ -21,15 +23,12 @@ Instance Type: t2.micro (Free Tier)
 Key Pair: I used an existing one for SSH access.
 Security Group: Allowed inbound rules for HTTP (port 80), HTTPS (port 443), and SSH (port 22).
 3.Launched the instance successfully and noted its Public IP Address: 3.84.13.68
-
-2. Accessing the EC2 Instance via SSH
-1. Opened a terminal and connected to the server using SSH:
-
-ssh -i my-aws-key.pem ubuntu@3.84.13.68
-2. Switched to the root user:
-sudo -I
-3. Installing and Configuring Apache Server
-1. Updated the server:
+4. Accessing the EC2 Instance via SSH
+5. Opened a terminal and connected to the server using SSH:
+6. ssh -i my-aws-key.pem ubuntu@3.84.13.68
+8. Switched to the root user: sudo -I
+9. Installing and Configuring Apache Server
+10. Updated the server:
 apt update -y
 2. Installed Apache Web Server:
 apt install -y apache2
@@ -73,3 +72,6 @@ Secure URL: https://osagieanolu.engineer
 
 
 ![WhatsApp Image 2024-12-21 at 11 42 11](https://github.com/user-attachments/assets/013fca60-cb53-481b-a20d-b1f9c94092b1)
+
+# Contact 
+If you have any questions or suggestions, please feel free to open an issue or contact me by [email](mailto:osagieanolu22@gmail.com) or [LinkedIn](https://www.linkedin.com/in/osagie-anolu-963b78216/)
