@@ -55,7 +55,7 @@ ls -lrt
 systemctl restart apache2
 
 # Domain and SSL certificate
-1.I got a domain (osagieanolu.engineer) from name.com and I linked my IP addr to it
+1. I got a domain (osagieanolu.engineer) from name.com and I linked my IP addr to it
 2. I installed Snapd-----apt install Snapd
 3. Installed certbot via snap-------sudo snap install --classic certbot
 4. Prepare Certbot Command------sudo certbot --apache
