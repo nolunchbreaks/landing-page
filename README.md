@@ -71,7 +71,8 @@ This document details the step-by-step process of provisioning an AWS EC2 server
 - Secure URL: https://osagieanolu.engineer
 
 
-![WhatsApp Image 2024-12-21 at 11 42 11](https://github.com/user-attachments/assets/013fca60-cb53-481b-a20d-b1f9c94092b1)
+![Screenshot (3)](https://github.com/user-attachments/assets/37684cf8-dd7c-4051-9159-ca56b1240323)
+
 
 # Contact 
 If you have any questions or suggestions, please feel free to open an issue or contact me by [email](mailto:osagieanolu22@gmail.com) or [LinkedIn](https://www.linkedin.com/in/osagie-anolu-963b78216/)
